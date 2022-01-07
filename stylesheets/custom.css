@@ -1,0 +1,19 @@
+/* match header color to Abacus site header */
+
+.md-header {
+	background-color: #F2F2F2;
+	color: #536f76;
+}
+
+/* change header logo size (default is 1.2rem square). Width is 2.7x height */
+
+.md-header__button.md-logo :is(img, svg){
+	height: 1.5rem;
+	width: 4.05rem;
+}
+
+/* custom class for images */
+
+.guide_image {
+	padding: 1em 2em;
+}

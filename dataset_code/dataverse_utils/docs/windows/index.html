@@ -1,0 +1,607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ubc-library-rc.github.io/abacus/dataset_code/dataverse_utils/docs/windows/">
+      
+      <link rel="icon" href="../../../../media/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Running the dataverse_utils scripts under Windows - Abacus resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#running-the-dataverse_utils-scripts-under-windows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Abacus resources" class="md-header__button md-logo" aria-label="Abacus resources" data-md-component="logo">
+      
+  <img src="../../../../media/abacus-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abacus resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Running the dataverse_utils scripts under Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Abacus resources" class="md-nav__button md-logo" aria-label="Abacus resources" data-md-component="logo">
+      
+  <img src="../../../../media/abacus-header.png" alt="logo">
+
+    </a>
+    Abacus resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        About Abacus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/guides/user/" class="md-nav__link">
+        User guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../privacy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">Dataset code</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Dataset code" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Dataset code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Dataverse utilities</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Dataverse utilities" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dataverse utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_ref/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scripts/" class="md-nav__link">
+        Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bc_assessment/bc_assessment/" class="md-nav__link">
+        BC Assessment data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pccf/pccf/" class="md-nav__link">
+        Postal Code Conversion Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-terminal-type" class="md-nav__link">
+    Windows Terminal type
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Terminal type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    PowerShell
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-prompt" class="md-nav__link">
+    Command prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-session" class="md-nav__link">
+    SSH session
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-bash" class="md-nav__link">
+    Git Bash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="running-the-dataverse_utils-scripts-under-windows">Running the dataverse_utils scripts under Windows<a class="headerlink" href="#running-the-dataverse_utils-scripts-under-windows" title="Permanent link">&para;</a></h1>
+<p>On Mac and Linux, running the scripts supplied with <code class="highlight">dataverse_utils</code> is straightforward. They're available at the command line, which means that you can simply run them by (for example):</p>
+<p><code class="highlight">$ dv_manifest_gen.py</code> followed by switches and variables as normal.</p>
+<p>Doing this results in output to the terminal window. <strong>This is not necessarily the case in Windows</strong>.</p>
+<p>This test case uses a new installation of <a href="https://python.org">https://python.org</a> Python, v.3.9.6, installed in Windows using the GUI, so it's as basic a Windows installation as you can get.</p>
+<p>In this instance, <code class="highlight">dataverse_utils</code> were installed using pip from the PowerShell, ie <code class="highlight">pip install git+https://github.com/ubc-library-rc/dataverse_utils</code>. However, pip should be pip regardless of which console you use to install.</p>
+<p>Here's a handy guide to show the results of how/if the command line scripts run. This example uses <code class="highlight">dv_manifest.gen.py</code>, but appears to be generally applicable to any scripts configured with setuptools.setup()  (ie, <code class="highlight"><span class="n">setuptools</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">scripts</span><span class="o">=[</span><span class="n">whatever</span><span class="o">]</span><span class="w"></span></code>). If this means nothing to you because you're not distributing your own Python packages,, just skip to the table below.</p>
+<h2 id="windows-terminal-type">Windows Terminal type<a class="headerlink" href="#windows-terminal-type" title="Permanent link">&para;</a></h2>
+<h3 id="powershell">PowerShell<a class="headerlink" href="#powershell" title="Permanent link">&para;</a></h3>
+<p>Note that on these tests the user <strong>is not an administrator</strong>. Administrator results, in all likelihood, will be completely different, ideally better.</p>
+<p><strong>Problem</strong></p>
+<p>Attempting to run the script results in a window popping up for a nanosecond and no output.</p>
+<p><strong>Solution</strong></p>
+<p>This may not occur if the PowerShell is run as an administrator. What is happening here is that the script <em>is</em> running, but it's showing up in a separate window.  Output can be created as normal, if you use the correct switches. Unfortunately, you won't be able to see what they are, because the popup window disappears, which is not helpful. There are three potential fixes.</p>
+<ol>
+<li>
+<p>If you can run PowerShell as an administrator, that <em>may</em> solve the problem.</p>
+</li>
+<li>
+<p>Edit the PATHEXT environment variable to include the .py extension. Note that if the <strong>user</strong> PATHEXT is edited, the system will ignore the system PATHEXT, meaning that things like .exe files won't run unless the full name is typed (eg. 'notepad.exe'). So, if editing the user PATHEXT, make sure to include the system PATHEXT and append <code class="highlight">;.PY</code> to the string.</p>
+</li>
+<li>
+<p>Edit the PATHEXT for PowerShell itself, rather than on a system wide level. Editing $PROFILE to include the .py extension should allow the Python script to run within PowerShell. For instructions, see <a href="https://docs.microsoft.com/en-ca/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1">https://docs.microsoft.com/en-ca/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1</a>.</p>
+<ol>
+<li>
+<p>Create a profile as per <strong>How to create a profile</strong></p>
+</li>
+<li>
+<p>Within that profile, <code class="highlight"><span class="o">$</span><span class="nt">env</span><span class="p">:</span><span class="nd">PATHEXT</span> <span class="o">+=</span> <span class="s2">&quot;;.py&quot;</span></code></p>
+</li>
+</ol>
+<p>Depending on the nature of your Windows installation, this may be disabled by the security policy, in which case you can also try the method above.</p>
+</li>
+</ol>
+<h3 id="command-prompt">Command prompt<a class="headerlink" href="#command-prompt" title="Permanent link">&para;</a></h3>
+<p>This is the traditional Windows command prompt (ie, <code class="highlight">cmd.exe</code>).</p>
+<p>The scripts <em>should</em> just work after being installed with pip, as this installation is the default. For example, run with:</p>
+<p><code class="highlight"><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="o">&gt;</span><span class="n">dv_manifest_gen</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="o">[</span><span class="n">arguments</span><span class="o">]</span><span class="w"></span></code></p>
+<p>Obviously it don't type the <code class="highlight">C:\&gt;</code> part.</p>
+<h3 id="ssh-session">SSH session<a class="headerlink" href="#ssh-session" title="Permanent link">&para;</a></h3>
+<p>If using the built-in Windows SSH server, scripts should simply run as per the <em>command prompt</em> above. Windows SSH sessions default to using the Windows command prompt, not bash. Bash sessions under SSH should function if Bash is configured as below.</p>
+<h3 id="git-bash">Git Bash<a class="headerlink" href="#git-bash" title="Permanent link">&para;</a></h3>
+<p><em>Git Bash</em> is part of the git suite available here: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>. There are a few notable wrinkles with for use with Python.</p>
+<p><strong>During installation of Git</strong></p>
+<ol>
+<li>
+<p>After v2.32.0.2 (and possibly earlier), you will have the option during the installation to "Enable experimental support for pseudo consoles". Doing this will allow you run Python directly from the bash shell like you would normally, and the scripts should function as per the <em>command prompt</em> above. </p>
+<p>As a bonus,  enabling this feature seems to fix errors with pipes which formerly resulted in the <code class="highlight">stdout is not a tty</code> error when piping shell output (for instance, to <code class="highlight">grep</code>). </p>
+</li>
+<li>
+<p>If you have <em>not</em> checked this box, you will need to add an alias to your <code class="highlight"><span class="na">.bashrc</span></code> and/or <code class="highlight"><span class="na">.bash_profile</span></code>:</p>
+<p><code class="highlight">alias python=&#39;winpty python&#39;</code>
+<code class="highlight">alias pip=&#39;winpty pip&#39;</code></p>
+<p>Either that, or you will need to start Python with <code class="highlight">winpty python</code>, which is annoying. Similarly <code class="highlight">winpty pip</code>. </p>
+</li>
+</ol>
+<p>Even if you have not enabled pseudo-console support and didn't complete use option 2, the scripts <em>should</em> still function normally though. Having scripts work but Python not work is not optimal and confusing, so a solution is there even though it technically isn't required.</p>
+<p>There are many options for Git Bash installation; testing has not covered all possible permutations of installation options.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022, Abacus Data Network
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/ubc-library-rc/abacus" target="_blank" rel="noopener" title="View content in GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.top", "header.autohide", "content.code.annotate", "navigation.indexes", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

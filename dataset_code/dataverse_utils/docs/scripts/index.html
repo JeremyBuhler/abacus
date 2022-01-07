@@ -1,0 +1,871 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ubc-library-rc.github.io/abacus/dataset_code/dataverse_utils/docs/scripts/">
+      
+      <link rel="icon" href="../../../../media/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Scripts - Abacus resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utility-scripts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Abacus resources" class="md-header__button md-logo" aria-label="Abacus resources" data-md-component="logo">
+      
+  <img src="../../../../media/abacus-header.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abacus resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Scripts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Abacus resources" class="md-nav__button md-logo" aria-label="Abacus resources" data-md-component="logo">
+      
+  <img src="../../../../media/abacus-header.png" alt="logo">
+
+    </a>
+    Abacus resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        About Abacus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../en/guides/user/" class="md-nav__link">
+        User guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../privacy/" class="md-nav__link">
+        Privacy policy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">Dataset code</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Dataset code" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Dataset code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Dataverse utilities</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Dataverse utilities" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dataverse utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_ref/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Scripts
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dv_delpy" class="md-nav__link">
+    dv_del.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_manifest_genpy" class="md-nav__link">
+    dv_manifest_gen.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_upload_tsvpy" class="md-nav__link">
+    dv_upload_tsv.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_releasepy" class="md-nav__link">
+    dv_release.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_ldc_uploaderpy" class="md-nav__link">
+    dv_ldc_uploader.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_pg_facet_datepy" class="md-nav__link">
+    dv_pg_facet_date.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-for-windows-users" class="md-nav__link">
+    Notes for Windows users
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bc_assessment/bc_assessment/" class="md-nav__link">
+        BC Assessment data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pccf/pccf/" class="md-nav__link">
+        Postal Code Conversion Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dv_delpy" class="md-nav__link">
+    dv_del.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_manifest_genpy" class="md-nav__link">
+    dv_manifest_gen.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_upload_tsvpy" class="md-nav__link">
+    dv_upload_tsv.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_releasepy" class="md-nav__link">
+    dv_release.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_ldc_uploaderpy" class="md-nav__link">
+    dv_ldc_uploader.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dv_pg_facet_datepy" class="md-nav__link">
+    dv_pg_facet_date.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-for-windows-users" class="md-nav__link">
+    Notes for Windows users
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="utility-scripts">Utility scripts<a class="headerlink" href="#utility-scripts" title="Permanent link">&para;</a></h1>
+<style>
+code {
+  white-space : pre-wrap !important;
+}
+</style>
+
+<p>These scripts are available at the command line/command prompt and don't require any Python knowledge except how to install a Python library via pip, as outlined in the <a href="../">overview</a> document.</p>
+<p>Once installed via pip, the scripts <a href="#footnote"><em>should</em></a> be available via the command line and will not require calling Python explicitly. That is, they can be called from the command line directly. For example:</p>
+<p><code class="highlight">dv_tsv_manifest.py</code></p>
+<p>is all you will need to type.</p>
+<p>Note that these programs have been primarily tested on Linux and MacOS, with <a href="#footnote">Windows a tertiary priority</a>. Windows is notable for its unusual file  handling, so, as the MIT licenses stipulates, there is no warranty as to the suitability for a particular purpose.</p>
+<p>Of course, they <em>should</em> work.</p>
+<p>In no particular order:</p>
+<h2 id="dv_delpy">dv_del.py<a class="headerlink" href="#dv_delpy" title="Permanent link">&para;</a></h2>
+<p>This is bulk deletion utility for unpublished studies (or even single studies). It's useful when your automated procedures have gone wrong, or if you don't feel like navigating through many menus.</p>
+<p>Note the <code class="highlight">-i</code> switch which can ask for manual confirmation of deletions.</p>
+<p><strong>Usage</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">usage</span><span class="o">:</span> <span class="n">dv_del</span><span class="o">.</span><span class="na">py</span> <span class="o">[-</span><span class="n">h</span><span class="o">]</span> <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span> <span class="o">[-</span><span class="n">d</span> <span class="n">DATAVERSE</span> <span class="o">|</span> <span class="o">-</span><span class="n">p</span> <span class="n">PID</span><span class="o">]</span> <span class="o">[-</span><span class="n">i</span><span class="o">]</span> <span class="o">[-</span><span class="n">u</span> <span class="n">DVURL</span><span class="o">]</span> <span class="o">[--</span><span class="n">version</span><span class="o">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">Delete</span> <span class="n">draft</span> <span class="n">studies</span> <span class="n">from</span> <span class="n">a</span> <span class="n">Dataverse</span> <span class="n">collection</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">optional</span> <span class="k">arguments</span><span class="o">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>  <span class="o">-</span><span class="n">h</span><span class="o">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="k">this</span> <span class="n">help</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span><span class="o">,</span> <span class="o">--</span><span class="n">key</span> <span class="n">KEY</span>     <span class="n">Dataverse</span> <span class="n">user</span> <span class="n">API</span> <span class="n">key</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="o">-</span><span class="n">d</span> <span class="n">DATAVERSE</span><span class="o">,</span> <span class="o">--</span><span class="n">dataverse</span> <span class="n">DATAVERSE</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>                        <span class="n">Dataverse</span> <span class="n">collection</span> <span class="n">short</span> <span class="n">name</span> <span class="n">from</span> <span class="n">which</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">all</span> <span class="n">draft</span> <span class="n">records</span><span class="o">.</span> <span class="n">eg</span><span class="o">.</span> <span class="s2">&quot;ldc&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="o">-</span><span class="n">p</span> <span class="n">PID</span><span class="o">,</span> <span class="o">--</span><span class="n">persistentId</span> <span class="n">PID</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>                        <span class="n">Handle</span> <span class="n">or</span> <span class="n">DOI</span> <span class="n">to</span> <span class="n">delete</span> <span class="k">in</span> <span class="n">format</span> <span class="n">hdl</span><span class="o">:</span><span class="mf">11272.1</span><span class="sr">/FK2/</span><span class="mi">12345</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  <span class="o">-</span><span class="n">i</span><span class="o">,</span> <span class="o">--</span><span class="n">interactive</span>     <span class="n">Confirm</span> <span class="k">each</span> <span class="n">study</span> <span class="n">deletion</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>  <span class="o">-</span><span class="n">u</span> <span class="n">DVURL</span><span class="o">,</span> <span class="o">--</span><span class="n">url</span> <span class="n">DVURL</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>                        <span class="n">URL</span> <span class="n">to</span> <span class="n">base</span> <span class="n">Dataverse</span> <span class="n">installation</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="n">and</span> <span class="n">exit</span>
+</code></pre></div>
+<h2 id="dv_manifest_genpy">dv_manifest_gen.py<a class="headerlink" href="#dv_manifest_genpy" title="Permanent link">&para;</a></h2>
+<p>Not technically a Dataverse-specific script, this utility will generate a tab-separated value output. The file consists of 3 columns: <strong>file, description and tags</strong>. </p>
+<p>Editing the result and using the upload utility to parse the tsv will add descriptive metadata, tags and file paths to an upload instead of laboriously using the Dataverse GUI.</p>
+<p>Tags may be separated by commas, eg: "Data, SAS, June 2021".</p>
+<p>Using stdout and a redirect will also save time. First dump a file as normal. Add other files to the end with different information using the exclude header switch <code class="highlight">-x</code> and different tags along with output redirection <code class="highlight">&gt;&gt;</code>.</p>
+<p><strong>Usage</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">usage</span><span class="p">:</span> <span class="n">dv_manifest_gen</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILENAME</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TAG</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="n">files</span> <span class="p">[</span><span class="n">files</span> <span class="o">...</span><span class="p">]]</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Creates</span> <span class="n">a</span> <span class="n">file</span> <span class="n">manifest</span> <span class="ow">in</span> <span class="n">tab</span> <span class="n">separated</span> <span class="n">value</span> <span class="n">format</span> <span class="n">which</span> <span class="n">can</span> <span class="n">then</span> <span class="n">be</span> <span class="n">edited</span> <span class="ow">and</span> <span class="n">used</span> <span class="k">for</span> <span class="n">file</span> <span class="n">uploads</span> <span class="n">to</span> <span class="n">a</span> <span class="n">Dataverse</span> <span class="n">collection</span><span class="o">.</span> <span class="n">Files</span> <span class="n">can</span> <span class="n">be</span> <span class="n">edited</span> <span class="n">to</span> <span class="n">add</span> <span class="n">file</span> <span class="n">descriptions</span> <span class="ow">and</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">comma</span><span class="o">-</span><span class="n">separated</span> <span class="n">tags</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">automatically</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">metadata</span> <span class="n">using</span> <span class="n">products</span> <span class="n">using</span> <span class="n">the</span> <span class="n">dataverse_utils</span> <span class="n">library</span><span class="o">.</span> <span class="n">Will</span> <span class="n">dump</span> <span class="n">to</span> <span class="n">stdout</span> <span class="n">unless</span> <span class="o">-</span><span class="n">f</span> <span class="ow">or</span> <span class="o">--</span><span class="n">filename</span> <span class="k">is</span> <span class="n">used</span><span class="o">.</span> <span class="n">Using</span> <span class="n">the</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">command</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">dash</span> <span class="p">(</span><span class="n">ie</span><span class="p">,</span> <span class="s2">&quot;dv_manifest_gen.py -&quot;</span> <span class="n">produces</span> <span class="n">full</span> <span class="n">paths</span> <span class="k">for</span> <span class="n">some</span> <span class="n">reason</span><span class="o">.</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>  <span class="n">files</span>                 <span class="n">Files</span> <span class="n">to</span> <span class="n">add</span> <span class="n">to</span> <span class="n">manifest</span><span class="o">.</span> <span class="n">Leaving</span> <span class="n">it</span> <span class="n">blank</span> <span class="n">will</span> <span class="n">add</span> <span class="n">all</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">directory</span><span class="o">.</span> <span class="n">If</span> <span class="n">using</span> <span class="o">-</span><span class="n">r</span> <span class="n">will</span> <span class="n">recursively</span> <span class="n">show</span> <span class="n">all</span><span class="o">.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>  <span class="o">-</span><span class="n">f</span> <span class="n">FILENAME</span><span class="p">,</span> <span class="o">--</span><span class="n">filename</span> <span class="n">FILENAME</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>                        <span class="n">Save</span> <span class="n">to</span> <span class="n">file</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">outputting</span> <span class="n">to</span> <span class="n">stdout</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>  <span class="o">-</span><span class="n">t</span> <span class="n">TAG</span><span class="p">,</span> <span class="o">--</span><span class="n">tag</span> <span class="n">TAG</span>     <span class="n">Default</span> <span class="n">tag</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span> <span class="n">Separate</span> <span class="n">with</span> <span class="n">comma</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">quotes</span> <span class="k">if</span> <span class="n">there</span> <span class="n">are</span> <span class="n">spaces</span><span class="o">.</span> <span class="n">eg</span><span class="o">.</span> <span class="s2">&quot;Data, June 2021&quot;</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="s2">&quot;Data&quot;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>  <span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">header</span>       <span class="n">Don</span><span class="s1">&#39;t include header in output. Useful if creating a complex tsv using redirects (ie, &quot;&gt;&gt;&quot;).</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>  <span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="o">--</span><span class="n">recursive</span>       <span class="n">Recursive</span> <span class="n">listing</span><span class="o">.</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>  <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">show</span><span class="o">-</span><span class="n">hidden</span>     <span class="n">Include</span> <span class="n">hidden</span> <span class="n">files</span><span class="o">.</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="ow">and</span> <span class="n">exit</span>
+</code></pre></div>
+<h2 id="dv_upload_tsvpy">dv_upload_tsv.py<a class="headerlink" href="#dv_upload_tsvpy" title="Permanent link">&para;</a></h2>
+<p>Now that you have a tsv full of nicely described data, you can easily upload it to an existing study if you know the persistent ID and have an API key.</p>
+<p>For the best metadata, you should probably edit it manually to add correct descriptive metadata, notably the "Description" and "Tags". Tags are split separated by commas, so it's possible to have multiple tags for each data item, like "Data, SPSS, June 2021".</p>
+<p>File paths are automatically generated from the "file" column. Because of this, you should probably use relative paths rather than absolute paths unless you want to have a lengthy path string in Dataverse.</p>
+<p><strong>Usage</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">usage</span><span class="err">:</span><span class="w"> </span><span class="n">dv_upload_tsv</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="o">[</span><span class="n">-h</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="n">PID</span><span class="w"> </span><span class="o">-</span><span class="n">k</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">[</span><span class="n">-u URL</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-r</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">-t TRUNCATE</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">--version</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">tsv</span><span class="o">]</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">Uploads</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">sets</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="o">*</span><span class="n">existing</span><span class="o">*</span><span class="w"> </span><span class="n">Dataverse</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">contents</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">TSV</span><span class="w"> </span><span class="p">(</span><span class="n">tab</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="k">value</span><span class="p">)</span><span class="w"> </span><span class="k">file</span><span class="p">.</span><span class="w"> </span><span class="n">Metadata</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="n">tags</span><span class="p">,</span><span class="w"> </span><span class="n">paths</span><span class="p">,</span><span class="w"> </span><span class="n">etc</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="k">read</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">TSV</span><span class="p">.</span><span class="w"> </span><span class="n">JSON</span><span class="w"> </span><span class="k">output</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">Dataverse</span><span class="w"> </span><span class="n">API</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">printed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">stdout</span><span class="w"> </span><span class="n">during</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">process</span><span class="p">.</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">positional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="n">tsv</span><span class="w">                   </span><span class="n">TSV</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">optional</span><span class="w"> </span><span class="nl">arguments</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">            </span><span class="n">show</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">help</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">exit</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">  </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="n">PID</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">pid</span><span class="w"> </span><span class="n">PID</span><span class="w">     </span><span class="n">Dataverse</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="n">persistent</span><span class="w"> </span><span class="n">identifier</span><span class="w"> </span><span class="p">(</span><span class="n">DOI</span><span class="o">/</span><span class="n">handle</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">  </span><span class="o">-</span><span class="n">k</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="k">key</span><span class="w"> </span><span class="k">KEY</span><span class="w">     </span><span class="n">API</span><span class="w"> </span><span class="k">key</span><span class="w"></span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">  </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">URL</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">url</span><span class="w"> </span><span class="n">URL</span><span class="w">     </span><span class="n">Dataverse</span><span class="w"> </span><span class="n">installation</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="n">url</span><span class="p">.</span><span class="w"> </span><span class="n">defaults</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="ss">&quot;https://abacus.library.ubc.ca&quot;</span><span class="w"></span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">  </span><span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="k">restrict</span><span class="w">        </span><span class="k">Restrict</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">upload</span><span class="p">.</span><span class="w"></span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">  </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="k">TRUNCATE</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="k">truncate</span><span class="w"> </span><span class="k">TRUNCATE</span><span class="w"></span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">                        </span><span class="nf">Left</span><span class="w"> </span><span class="k">truncate</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">path</span><span class="p">.</span><span class="w"> </span><span class="k">As</span><span class="w"> </span><span class="n">Dataverse</span><span class="w"> </span><span class="n">studies</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">retain</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="k">structure</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">arbitrary</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">removing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">leftmost</span><span class="w"> </span><span class="n">portion</span><span class="p">.</span><span class="w"> </span><span class="nl">Eg</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"></span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">                        </span><span class="n">TSV</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="k">Data</span><span class="o">/</span><span class="k">file</span><span class="p">.</span><span class="n">txt</span><span class="p">,</span><span class="w"> </span><span class="n">setting</span><span class="w"> </span><span class="o">--</span><span class="k">truncate</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="ss">&quot;/home/user&quot;</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="k">file</span><span class="p">.</span><span class="n">txt</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">Data</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Dataverse</span><span class="w"> </span><span class="n">study</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">is</span><span class="w"></span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">                        </span><span class="n">still</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">spreadsheet</span><span class="p">.</span><span class="w"> </span><span class="n">Defaults</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">truncation</span><span class="p">.</span><span class="w"></span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="c1">--version             Show version number and exit</span>
+</code></pre></div>
+<h2 id="dv_releasepy">dv_release.py<a class="headerlink" href="#dv_releasepy" title="Permanent link">&para;</a></h2>
+<p>A bulk release utility for Dataverse. This utility will normally be used after a migration or large data transfer, such as a <a href="https://ubc-library-rc.github.io/dryad2dataverse">dryad2dataverse</a> transfer from the Dryad data repository. It can release studies individually by persistent ID or just release all unreleased files in a Dataverse.</p>
+<p><strong>Usage</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">usage</span><span class="o">:</span> <span class="n">dv_release</span><span class="o">.</span><span class="na">py</span> <span class="o">[-</span><span class="n">h</span><span class="o">]</span> <span class="o">[-</span><span class="n">u</span> <span class="n">URL</span><span class="o">]</span> <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span> <span class="o">[-</span><span class="n">i</span><span class="o">]</span> <span class="o">[--</span><span class="n">time</span> <span class="n">STIME</span><span class="o">]</span> <span class="o">[-</span><span class="n">v</span><span class="o">]</span> <span class="o">[-</span><span class="n">r</span><span class="o">]</span> <span class="o">[-</span><span class="n">d</span> <span class="n">DV</span> <span class="o">|</span> <span class="o">-</span><span class="n">p</span> <span class="n">PID</span> <span class="o">[</span><span class="n">PID</span> <span class="o">...]]</span> <span class="o">[--</span><span class="n">version</span><span class="o">]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">Bulk</span> <span class="n">file</span> <span class="n">releaser</span> <span class="k">for</span> <span class="n">unpublished</span> <span class="n">Dataverse</span> <span class="n">studies</span><span class="o">.</span> <span class="n">Either</span> <span class="n">releases</span> <span class="n">individual</span> <span class="n">studies</span> <span class="n">or</span> <span class="n">all</span> <span class="n">unreleased</span> <span class="n">studies</span> <span class="k">in</span> <span class="n">a</span> <span class="n">single</span> <span class="n">Dataverse</span> <span class="n">collection</span><span class="o">.</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">optional</span> <span class="k">arguments</span><span class="o">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="o">-</span><span class="n">h</span><span class="o">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="k">this</span> <span class="n">help</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>  <span class="o">-</span><span class="n">u</span> <span class="n">URL</span><span class="o">,</span> <span class="o">--</span><span class="n">url</span> <span class="n">URL</span>     <span class="n">Dataverse</span> <span class="n">installation</span> <span class="n">base</span> <span class="n">URL</span><span class="o">.</span> <span class="n">Default</span><span class="o">:</span> <span class="n">https</span><span class="o">://</span><span class="n">abacus</span><span class="o">.</span><span class="na">library</span><span class="o">.</span><span class="na">ubc</span><span class="o">.</span><span class="na">ca</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>  <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span><span class="o">,</span> <span class="o">--</span><span class="n">key</span> <span class="n">KEY</span>     <span class="n">API</span> <span class="n">key</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>  <span class="o">-</span><span class="n">i</span><span class="o">,</span> <span class="o">--</span><span class="n">interactive</span>     <span class="n">Manually</span> <span class="n">confirm</span> <span class="k">each</span> <span class="n">release</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>  <span class="o">--</span><span class="n">time</span> <span class="n">STIME</span><span class="o">,</span> <span class="o">-</span><span class="n">t</span> <span class="n">STIME</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>                        <span class="n">Time</span> <span class="n">between</span> <span class="n">release</span> <span class="n">attempts</span> <span class="k">in</span> <span class="n">seconds</span><span class="o">.</span> <span class="n">Default</span> <span class="mi">10</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>  <span class="o">-</span><span class="n">v</span>                    <span class="n">Verbose</span> <span class="n">mode</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>  <span class="o">-</span><span class="n">r</span><span class="o">,</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span>         <span class="n">Only</span> <span class="n">output</span> <span class="n">a</span> <span class="n">list</span> <span class="n">of</span> <span class="n">studies</span> <span class="n">to</span> <span class="n">be</span> <span class="n">released</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>  <span class="o">-</span><span class="n">d</span> <span class="n">DV</span><span class="o">,</span> <span class="o">--</span><span class="n">dv</span> <span class="n">DV</span>        <span class="n">Short</span> <span class="n">name</span> <span class="n">of</span> <span class="n">Dataverse</span> <span class="n">collection</span> <span class="n">to</span> <span class="n">process</span> <span class="o">(</span><span class="n">eg</span><span class="o">:</span> <span class="n">statcan</span><span class="o">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>  <span class="o">-</span><span class="n">p</span> <span class="n">PID</span> <span class="o">[</span><span class="n">PID</span> <span class="o">...],</span> <span class="o">--</span><span class="n">pid</span> <span class="n">PID</span> <span class="o">[</span><span class="n">PID</span> <span class="o">...]</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>                        <span class="n">Handles</span> <span class="n">or</span> <span class="n">DOIs</span> <span class="n">to</span> <span class="n">release</span> <span class="k">in</span> <span class="n">format</span> <span class="n">hdl</span><span class="o">:</span><span class="mf">11272.1</span><span class="sr">/FK2/12345 or doi:10.80240/FK2/</span><span class="n">NWRABI</span><span class="o">.</span> <span class="n">Multiple</span> <span class="n">values</span> <span class="n">OK</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="n">and</span> <span class="n">exit</span>
+</code></pre></div>
+<h2 id="dv_ldc_uploaderpy">dv_ldc_uploader.py<a class="headerlink" href="#dv_ldc_uploaderpy" title="Permanent link">&para;</a></h2>
+<p>This is a very specialized utility which will scrape metadata from the <a href="https://www.ldc.upenn.edu/">Linguistic Data Consortium</a> (LDC) and create a metadata record in a Dataverse. The LDC does not have an API, so the metadata is scraped from their web site. This means that the metadata may not be quite as controlled as that which comes from an API. </p>
+<p>Data from the LDC website is converted to <a href="https://datadryad.org">Dryad</a>-style JSON via <code class="highlight">dataverse_utils.ldc</code> via the use of the <a href="https://ubc-library-rc.github.io/dryad2dataverse">dryad2dataverse</a> library.</p>
+<p>There are two main methods of use for this utility:</p>
+<ol>
+<li>
+<p>Multiple metadata uploads. Multiple LDC record numbers can be supplied and a study without files will be created for each one.</p>
+</li>
+<li>
+<p>If a TSV file with file information is upplied via the <code class="highlight">-t</code> or <code class="highlight">--tsv</code> switch, the utility will upload a single LDC study and upload the contents of the tsv file to the created record.</p>
+</li>
+</ol>
+<p><strong>Usage</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">usage</span><span class="p">:</span> <span class="n">dv_ldc_uploader</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span> <span class="n">URL</span><span class="p">]</span> <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">DVS</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TSV</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span> <span class="n">CNAME</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span> <span class="n">EMAIL</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="n">studies</span> <span class="p">[</span><span class="n">studies</span> <span class="o">...</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">Linguistic</span> <span class="n">Data</span> <span class="n">Consortium</span> <span class="n">metadata</span> <span class="n">uploader</span> <span class="k">for</span> <span class="n">Dataverse</span><span class="o">.</span> <span class="n">This</span> <span class="n">utility</span> <span class="n">will</span> <span class="n">scrape</span> <span class="n">the</span> <span class="n">metadata</span> <span class="n">from</span> <span class="n">the</span> <span class="n">LDC</span> <span class="n">website</span> <span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">catalog</span><span class="o">.</span><span class="n">ldc</span><span class="o">.</span><span class="n">upenn</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span> <span class="ow">and</span> <span class="n">upload</span> <span class="n">data</span> <span class="n">based</span> <span class="n">on</span> <span class="n">a</span> <span class="n">TSV</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">manifest</span><span class="o">.</span> <span class="n">Please</span> <span class="n">note</span> <span class="n">that</span> <span class="n">this</span> <span class="n">utility</span> <span class="n">was</span> <span class="n">built</span> <span class="n">with</span> <span class="n">the</span> <span class="n">Abacus</span> <span class="n">repository</span> <span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">abacus</span><span class="o">.</span><span class="n">library</span><span class="o">.</span><span class="n">ubc</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span> <span class="ow">in</span> <span class="n">mind</span><span class="p">,</span> <span class="n">so</span> <span class="n">many</span> <span class="n">of</span> <span class="n">the</span> <span class="n">defaults</span> <span class="n">are</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">that</span> <span class="n">Dataverse</span> <span class="n">installation</span><span class="o">.</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>  <span class="n">studies</span>               <span class="n">LDC</span> <span class="n">Catalogue</span> <span class="n">numbers</span> <span class="n">to</span> <span class="n">process</span><span class="p">,</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">spaces</span><span class="o">.</span> <span class="n">eg</span><span class="o">.</span> <span class="s2">&quot;LDC2012T19 LDC2011T07&quot;</span><span class="o">.</span> <span class="n">Case</span> <span class="k">is</span> <span class="n">ignored</span><span class="p">,</span> <span class="n">so</span> <span class="s2">&quot;ldc2012T19&quot;</span> <span class="n">will</span> <span class="n">also</span> <span class="n">work</span><span class="o">.</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>  <span class="o">-</span><span class="n">u</span> <span class="n">URL</span><span class="p">,</span> <span class="o">--</span><span class="n">url</span> <span class="n">URL</span>     <span class="n">Dataverse</span> <span class="n">installation</span> <span class="n">base</span> <span class="n">URL</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="s2">&quot;https://abacus.library.ubc.ca&quot;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>  <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span><span class="p">,</span> <span class="o">--</span><span class="n">key</span> <span class="n">KEY</span>     <span class="n">API</span> <span class="n">key</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>  <span class="o">-</span><span class="n">d</span> <span class="n">DVS</span><span class="p">,</span> <span class="o">--</span><span class="n">dvs</span> <span class="n">DVS</span>     <span class="n">Short</span> <span class="n">name</span> <span class="n">of</span> <span class="n">target</span> <span class="n">Dataverse</span> <span class="n">collection</span> <span class="p">(</span><span class="n">eg</span><span class="p">:</span> <span class="n">ldc</span><span class="p">)</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="s2">&quot;ldc&quot;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>  <span class="o">-</span><span class="n">t</span> <span class="n">TSV</span><span class="p">,</span> <span class="o">--</span><span class="n">tsv</span> <span class="n">TSV</span>     <span class="n">Manifest</span> <span class="n">tsv</span> <span class="n">file</span> <span class="k">for</span> <span class="n">uploading</span> <span class="ow">and</span> <span class="n">metadata</span><span class="o">.</span> <span class="n">If</span> <span class="ow">not</span> <span class="n">supplied</span><span class="p">,</span> <span class="n">only</span> <span class="n">metadata</span> <span class="n">will</span> <span class="n">be</span> <span class="n">uploaded</span><span class="o">.</span> <span class="n">Using</span> <span class="n">this</span> <span class="n">option</span> <span class="n">requires</span> <span class="n">only</span> <span class="n">one</span> <span class="n">positional</span> <span class="o">*</span><span class="n">studies</span><span class="o">*</span> <span class="n">argument</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>  <span class="o">-</span><span class="n">n</span> <span class="n">CNAME</span><span class="p">,</span> <span class="o">--</span><span class="n">cname</span> <span class="n">CNAME</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>                        <span class="n">Study</span> <span class="n">contact</span> <span class="n">name</span><span class="o">.</span> <span class="n">Default</span><span class="p">:</span> <span class="s2">&quot;Abacus support&quot;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>  <span class="o">-</span><span class="n">e</span> <span class="n">EMAIL</span><span class="p">,</span> <span class="o">--</span><span class="n">email</span> <span class="n">EMAIL</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>                        <span class="n">Dataverse</span> <span class="n">study</span> <span class="n">contact</span> <span class="n">email</span> <span class="n">address</span><span class="o">.</span> <span class="n">Default</span><span class="p">:</span> <span class="n">abacus</span><span class="o">-</span><span class="n">support</span><span class="err">@</span><span class="n">lists</span><span class="o">.</span><span class="n">ubc</span><span class="o">.</span><span class="n">ca</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>  <span class="o">-</span><span class="n">v</span><span class="p">,</span> <span class="o">--</span><span class="n">verbose</span>         <span class="n">Verbose</span> <span class="n">output</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="ow">and</span> <span class="n">exit</span>
+</code></pre></div>
+<h2 id="dv_pg_facet_datepy">dv_pg_facet_date.py<a class="headerlink" href="#dv_pg_facet_datepy" title="Permanent link">&para;</a></h2>
+<p>This specialized tool is designed to be run on the <strong>server</strong> on which the Dataverse installation exists. When material is published in a Dataverse installation, the "Publication Year" facet in the Dataverse GUI is automatically populated with a date, which is the publication date <em>in that Dataverse installation</em>. This makes sense from the point of view of research data which is first deposited into a Dataverse installation, but fails as a finding aid for either;</p>
+<ul>
+<li>older data sets that have been migrated and reingested</li>
+<li>licensed data sets which may have been published years before they were purchased and ingested.</li>
+</ul>
+<p>For example, if you have a dataset that was published in 1971 but you only added it to your Dataverse installation in 2021, it is not necessarily intuitive to the end user that the "publication date" in this instance would be 2021. Ideally, you might like it to be 1971.</p>
+<p>Unfortunately, there is no API-based tool to manage this date. The only way to change it, as of late 2021, is to modify the underlying PostgreSQL database directly with the desired date. Subsequently, the study must be reindexed so that the revised publication date appears as an option in the facet.</p>
+<p>This tool will perform those operations. However, the tool must be run on the <em>server</em> on which the Dataverse installation exists, as reindexing API calls must be from localhost and database access is necessarily restricted.</p>
+<p>There are a few other prerequisites for using this tool which differ from the rest of the scripts included in this package. </p>
+<ul>
+<li>The user must have shell access to the server hosting the Dataverse installation</li>
+<li>Python 3.6 or higher must be installed</li>
+<li>The user must possess a valid Dataverse API key</li>
+<li>The user must know the PostgreSQL password</li>
+<li>If the database name and user have been changed, the user must know this as well</li>
+<li>The script requires the manual installation of <code class="highlight">psycopg2-binary</code> or have a successfully compiled <code class="highlight">psycopg2</code> package for Python. See <a href="https://www.psycopg.org/docs/">https://www.psycopg.org/docs/</a>. This <strong>is not installed</strong> with the normal <code class="highlight">pip install</code> of the <em>dataverse_utils</em> package as none of the other scripts require it and, in general, the odds of someone using this utility are low. If you forget to install it, the program will politely remind you.</li>
+</ul>
+<p>This cannot be stressed enough. <strong>This tool will directly change values within the PostgreSQL database which holds all of Dataverse's information</strong>. Use this at your own risk; no warranty is implied and no responsibility will be accepted for data loss, etc. If any of the items listed make no sense to you or sound like gibberish, do not use this tool.</p>
+<p>Because editing the underlying database may have a high pucker factor for some, there is both a dry-run option and an option to just dump out SQL instead of actually touching anything. These two options do not perform a study reindex and don't alter the contents of the database.</p>
+<p><strong>Usage</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">usage</span><span class="o">:</span> <span class="n">dv_pg_facet_date</span><span class="o">.</span><span class="na">py</span> <span class="o">[-</span><span class="n">h</span><span class="o">]</span> <span class="o">[-</span><span class="n">d</span> <span class="n">DBNAME</span><span class="o">]</span> <span class="o">[-</span><span class="n">u</span> <span class="n">USER</span><span class="o">]</span> <span class="o">-</span><span class="n">p</span> <span class="n">PASSWORD</span> <span class="o">[-</span><span class="n">r</span> <span class="o">|</span> <span class="o">-</span><span class="n">o</span><span class="o">]</span> <span class="o">[-</span><span class="n">s</span><span class="o">]</span> <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span> <span class="o">[-</span><span class="n">w</span> <span class="n">URL</span><span class="o">]</span> <span class="o">[--</span><span class="n">version</span><span class="o">]</span> <span class="n">pids</span> <span class="o">[</span><span class="n">pids</span> <span class="o">...]</span> <span class="o">{</span><span class="n">distributionDate</span><span class="o">,</span><span class="n">productionDate</span><span class="o">,</span><span class="n">dateOfDeposit</span><span class="o">,</span><span class="n">dist</span><span class="o">,</span><span class="n">prod</span><span class="o">,</span><span class="n">dep</span><span class="o">}</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">A</span> <span class="n">utility</span> <span class="n">to</span> <span class="n">change</span> <span class="n">the</span> <span class="s1">&#39;Production Date&#39;</span> <span class="n">web</span> <span class="kd">interface</span> <span class="n">facet</span> <span class="k">in</span> <span class="n">a</span> <span class="n">Dataverse</span> <span class="n">installation</span> <span class="n">to</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">three</span> <span class="n">acceptable</span> <span class="n">date</span> <span class="n">types</span><span class="o">:</span> <span class="s1">&#39;distributionDate&#39;</span><span class="o">,</span> <span class="s1">&#39;productionDate&#39;</span><span class="o">,</span> <span class="n">or</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="s1">&#39;dateOfDeposit&#39;</span><span class="o">.</span> <span class="n">This</span> <span class="n">must</span> <span class="n">be</span> <span class="n">done</span> <span class="k">in</span> <span class="n">the</span> <span class="n">PostgreSQL</span> <span class="n">database</span> <span class="n">directly</span><span class="o">,</span> <span class="n">so</span> <span class="k">this</span> <span class="n">utility</span> <span class="n">must</span> <span class="n">be</span> <span class="n">run</span> <span class="n">on</span> <span class="n">the</span> <span class="o">*</span><span class="n">server</span><span class="o">*</span> <span class="n">that</span> <span class="n">hosts</span> <span class="n">a</span> <span class="n">Dataverse</span> <span class="n">installation</span><span class="o">.</span> <span class="n">Back</span> <span class="n">up</span> <span class="n">your</span> <span class="n">database</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">unsure</span><span class="o">.</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">positional</span> <span class="k">arguments</span><span class="o">:</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>  <span class="n">pids</span>                  <span class="n">persistentIdentifier</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>  <span class="o">{</span><span class="n">distributionDate</span><span class="o">,</span><span class="n">productionDate</span><span class="o">,</span><span class="n">dateOfDeposit</span><span class="o">,</span><span class="n">dist</span><span class="o">,</span><span class="n">prod</span><span class="o">,</span><span class="n">dep</span><span class="o">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>                        <span class="n">date</span> <span class="n">type</span> <span class="n">which</span> <span class="k">is</span> <span class="n">to</span> <span class="n">be</span> <span class="n">shown</span> <span class="k">in</span> <span class="n">the</span> <span class="n">facet</span><span class="o">.</span> <span class="n">The</span> <span class="n">short</span> <span class="n">forms</span> <span class="n">are</span> <span class="n">aliases</span> <span class="k">for</span> <span class="n">the</span> <span class="n">long</span> <span class="n">forms</span><span class="o">.</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">optional</span> <span class="k">arguments</span><span class="o">:</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>  <span class="o">-</span><span class="n">h</span><span class="o">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="k">this</span> <span class="n">help</span> <span class="n">message</span> <span class="n">and</span> <span class="n">exit</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>  <span class="o">-</span><span class="n">d</span> <span class="n">DBNAME</span><span class="o">,</span> <span class="o">--</span><span class="n">dbname</span> <span class="n">DBNAME</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>                        <span class="n">Database</span> <span class="n">name</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>  <span class="o">-</span><span class="n">u</span> <span class="n">USER</span><span class="o">,</span> <span class="o">--</span><span class="n">user</span> <span class="n">USER</span>  <span class="n">PostgreSQL</span> <span class="n">username</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>  <span class="o">-</span><span class="n">p</span> <span class="n">PASSWORD</span><span class="o">,</span> <span class="o">--</span><span class="n">password</span> <span class="n">PASSWORD</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>                        <span class="n">PostgreSQL</span> <span class="n">password</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>  <span class="o">-</span><span class="n">r</span><span class="o">,</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span>         <span class="n">print</span> <span class="n">proposed</span> <span class="n">SQL</span> <span class="n">to</span> <span class="n">stdout</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>  <span class="o">-</span><span class="n">o</span><span class="o">,</span> <span class="o">--</span><span class="n">sql</span><span class="o">-</span><span class="n">only</span>        <span class="n">dump</span> <span class="n">sql</span> <span class="n">to</span> <span class="n">file</span> <span class="n">called</span> <span class="o">*</span><span class="n">pg_sql</span><span class="o">.</span><span class="na">sql</span><span class="o">*</span> <span class="k">in</span> <span class="n">current</span> <span class="n">directory</span><span class="o">.</span> <span class="n">Appends</span> <span class="n">to</span> <span class="n">file</span> <span class="k">if</span> <span class="n">it</span> <span class="n">exists</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>  <span class="o">-</span><span class="n">s</span><span class="o">,</span> <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">old</span>        <span class="n">Dump</span> <span class="n">old</span> <span class="n">values</span> <span class="n">to</span> <span class="n">tsv</span> <span class="n">called</span> <span class="o">*</span><span class="n">pg_changed</span><span class="o">.</span><span class="na">tsv</span><span class="o">*</span> <span class="k">in</span> <span class="n">current</span> <span class="n">directory</span><span class="o">.</span> <span class="n">Appends</span> <span class="n">to</span> <span class="n">file</span> <span class="k">if</span> <span class="n">it</span> <span class="n">exists</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a>  <span class="o">-</span><span class="n">k</span> <span class="n">KEY</span><span class="o">,</span> <span class="o">--</span><span class="n">key</span> <span class="n">KEY</span>     <span class="n">API</span> <span class="n">key</span> <span class="k">for</span> <span class="n">Dataverse</span> <span class="n">installation</span><span class="o">.</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a>  <span class="o">-</span><span class="n">w</span> <span class="n">URL</span><span class="o">,</span> <span class="o">--</span><span class="n">url</span> <span class="n">URL</span>     <span class="n">URL</span> <span class="k">for</span> <span class="n">base</span> <span class="n">Dataverse</span> <span class="n">installation</span><span class="o">.</span> <span class="n">Default</span> <span class="n">https</span><span class="o">://</span><span class="n">abacus</span><span class="o">.</span><span class="na">library</span><span class="o">.</span><span class="na">ubc</span><span class="o">.</span><span class="na">ca</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="n">and</span> <span class="n">exit</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="n">THIS</span> <span class="n">WILL</span> <span class="n">EDIT</span> <span class="n">YOUR</span> <span class="n">POSTGRESQL</span> <span class="n">DATABASE</span> <span class="n">DIRECTLY</span><span class="o">.</span> <span class="n">USE</span> <span class="n">AT</span> <span class="n">YOUR</span> <span class="n">OWN</span> <span class="n">RISK</span><span class="o">.</span>
+</code></pre></div>
+<p><a name='footnote' /></p>
+<h2 id="notes-for-windows-users">Notes for Windows users<a class="headerlink" href="#notes-for-windows-users" title="Permanent link">&para;</a></h2>
+<p>Command line scripts for Python may not necessarily behave the way they do in Linux/Mac, depending on <em>how</em> you access them. For detailed information on Windows systems, please see the <a href="../windows/">Windows testing document</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../api_ref/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API reference" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              API reference
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              FAQ
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022, Abacus Data Network
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/ubc-library-rc/abacus" target="_blank" rel="noopener" title="View content in GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.top", "header.autohide", "content.code.annotate", "navigation.indexes", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>
