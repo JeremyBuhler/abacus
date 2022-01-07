@@ -7,6 +7,12 @@ nav:
   - 'Privacy policy': privacy.md
   - 'Dataset code': 
     - dataset_code/index.md
+    - 'Dataverse utilities': 
+        - dataset_code/dataverse_utils/docs/index.md
+        - 'API reference': dataset_code/dataverse_utils/docs/api_ref.md
+        - 'Scripts': dataset_code/dataverse_utils/docs/scripts.md
+        - 'FAQ': dataset_code/dataverse_utils/docs/faq.md
+        - 'Credits': dataset_code/dataverse_utils/docs/credits.md
     - 'BC Assessment data': dataset_code/bc_assessment/bc_assessment.md
     - 'Postal Code Conversion Files': dataset_code/pccf/pccf.md
 

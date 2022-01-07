@@ -1,0 +1,3 @@
+[submodule "docs/dataset_code/dataverse_utils"]
+	path = docs/dataset_code/dataverse_utils
+	url = https://github.com/ubc-library-rc/dataverse_utils.git
