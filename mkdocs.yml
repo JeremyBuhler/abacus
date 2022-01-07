@@ -1,0 +1,63 @@
+site_name: 'Abacus resources'
+site_url: 'https://ubc-library-rc.github.io/abacus/'
+
+nav:
+  - 'About Abacus': index.md
+  - 'User guide': en/guides/user/index.md
+  - 'Privacy policy': privacy.md
+  - 'Dataset code': 
+    - dataset_code/index.md
+    - 'BC Assessment data': dataset_code/bc_assessment/bc_assessment.md
+    - 'Postal Code Conversion Files': dataset_code/pccf/pccf.md
+
+theme: 
+  name: material 
+  palette:
+    primary: 'deep orange'
+    accent: indigo
+  logo: media/abacus-header.png
+  favicon: media/favicon.png
+  features:
+    - navigation.tracking
+    - navigation.top
+    - header.autohide
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.expand
+
+plugins: 
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ubc-library-rc/abacus
+      name: View content in GitHub
+  generator: false
+
+copyright: Copyright &copy; 2022, Abacus Data Network
+
+markdown_extensions:
+  - attr_list
+  - footnotes
+  - tables
+  - toc: 
+      permalink: true
+      title: On this page
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+      guess_lang: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.betterem
+  - admonition
+  - pymdownx.details
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: 'docs/'
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/custom.css
