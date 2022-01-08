@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guides-to-the-pccfpccf" class="md-skip">
+        <a href="#which-pccfpccf-file-should-i-use" class="md-skip">
           Skip to content
         </a>
       
@@ -433,6 +433,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#which-pccfpccf-file-should-i-use" class="md-nav__link">
+    Which PCCF/PCCF+ file should I use?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#guides-to-the-pccfpccf" class="md-nav__link">
     Guides to the PCCF/PCCF+
   </a>
@@ -488,6 +495,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#which-pccfpccf-file-should-i-use" class="md-nav__link">
+    Which PCCF/PCCF+ file should I use?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#guides-to-the-pccfpccf" class="md-nav__link">
     Guides to the PCCF/PCCF+
   </a>
@@ -538,15 +552,26 @@
 </tr>
 </tbody>
 </table>
-<p>Postal Code Conversion Files (PCCF and PCCF+) allow researchers to map postal codes to Canadian Census geographies (e.g. Census tract, Census subdivision)</p>
+<p>Postal Code Conversion Files allow researchers to map postal codes to Census geographies. Data with postal codes can be aggregated to standard geographies for reporting purposes or combined with other data available by Census geography (e.g. census tract, census subdivision). </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PCCF files do not contain any socioeconomic or demographic data themselves, they are just a key for aggregating or combining data files from other sources.  </p>
+</div>
+<p>Postal Code Conversion Files come in two flavours, the <strong>PCCF</strong> and <strong>PCCF+</strong>. Postal Code boundaries do not perfectly match census boundaries: one postal code may span multiple census subdivisions, for example. The PCCF and PCCF+ differ in how they handle this kind of overlap.</p>
+<blockquote>
 <ul>
-<li><strong>PCCF</strong>. Brief description.</li>
-<li><strong>PCCF+</strong>. Brief description.</li>
+<li>The PCCF file contains a Single Link Indicator (SLI) field to indicate the geographic area with the majority of dwellings assigned to a particular postal code.</li>
+<li>The PCCF+ is a SAS program using a population weighted random algorithm to increase accuracy where postal codes span over more than one geographic area</li>
 </ul>
+<p><em>from Queen's University Library's <a href="https://guides.library.queensu.ca/c.php?g=710466&amp;p=5062245">Guide to the PCCF/PCCF+</a></em></p>
+</blockquote>
+<h2 id="which-pccfpccf-file-should-i-use">Which PCCF/PCCF+ file should I use?<a class="headerlink" href="#which-pccfpccf-file-should-i-use" title="Permanent link">&para;</a></h2>
+<p>There are more than 50 PCCF/PCCF+ files in Abacus with different dates. This is because Postal Code and Census geographies change over time. Choose a PCCF/PCCF+ file with a Postal Code date as close as possible to the collection date of the data that contains the Postal Codes. </p>
 <h2 id="guides-to-the-pccfpccf">Guides to the PCCF/PCCF+<a class="headerlink" href="#guides-to-the-pccfpccf" title="Permanent link">&para;</a></h2>
-<p>Link to PCCF+ how-to guide? Other resources?</p>
+<p>Queens University Library maintains an excellent guide on PCCF and PCCF+ files, including step-by-step instructions for using the PCCF+ with SAS: <a href="https://guides.library.queensu.ca/PCCF/PCCF">https://guides.library.queensu.ca/PCCF/PCCF</a>. </p>
 <h2 id="pccf-helper-scripts">PCCF helper scripts<a class="headerlink" href="#pccf-helper-scripts" title="Permanent link">&para;</a></h2>
-<p>Link to Python (from SFU) and R (from UBC) helper scripts</p>
+<p>Recent PCCF files in Abacus include an SPSS syntax file to parse the data and assigns labels, making it easier to work with. Older PCCF records may only come with data files (e.g. <a href="https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/QA758U">this 2003 version</a>). </p>
+<p>When no syntax file is available researchers can use other tools to parse the data. The R script below provides an example that can be adapted to other files and contexts.</p>
 <div class="highlight"><span class="filename">pccf_prep_script.R</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># PCCF processing script, for June 2003 postal codes, 2001 Census</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># source files at https://hdl.handle.net/11272.1/AB2/QA758U</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># script assumes source files are in R working directory:</span>
