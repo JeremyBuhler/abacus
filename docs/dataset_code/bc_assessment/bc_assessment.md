@@ -55,3 +55,9 @@ Some elements in the source XML are repeatable, including valuation. This means 
 ### SQL queries
 With the SQLite browser it's easy to filter tables and export to CSV, but SQL queries are the most efficient way to extract a subset of the data that fits your parameters. If you are new to SQL the [W3Schools SQL Tutorial](https://www.w3schools.com/sql/) is a good place to learn the basics. 
 
+## abacusBCA package
+The abacusBCA R package created by Jens von Bergmann facilitates data access and basic processing of [BC Assessment data hosted on Abacus](https://hdl.handle.net/11272.1/AB2/LAPUAB) for research purposes. It has the ability to conveniently download the data and open a local sqlite connection. Users will have to specify their own abacus API token as environment variable to use this. 
+
+- Link to github repository: <https://github.com/mountainMath/abacusBCA>
+- Link to documentation: <https://mountainmath.github.io/abacusbca/>
+ 

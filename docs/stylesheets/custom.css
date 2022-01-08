@@ -17,3 +17,9 @@
 .guide_image {
 	padding: 1em 2em;
 }
+
+/* set max height of code blocks; code longer than this will scroll */
+
+.md-typeset pre > code {
+	max-height: 20rem;
+}
