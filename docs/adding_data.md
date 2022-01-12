@@ -5,7 +5,7 @@ Datasets in Abacus are grouped into collections, sometimes referred to as _datav
     The term _dataverse_ appears throughout the Abacus interface, particularly on pages for admin users. Abacus is an instance of the [Dataverse application](https://dataverse.org/about), an open source data repository, but the term can also refer to a collection of datasets _within_ Abacus 
 
 ## Who can add data?
-Users with administrative accounts may add datasets to Abacus that conform to the collection policy. Questions about the suitability of a dataset can be directed to <mailto:abacus-support@ubc.ca>. 
+Users with administrative accounts may add datasets to Abacus that conform to the collection policy. Questions about the suitability of a dataset can be directed to <mailto:abacus.support@ubc.ca>. 
 
 | Data contributor | Where they can add data
 | --- | ---
