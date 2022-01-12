@@ -226,22 +226,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
         
           
             
-          
-        
           
         
           
@@ -274,6 +270,42 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../bc_assessment/bc_assessment/" class="md-nav__link">
+        BC Assessment data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pccf/pccf/" class="md-nav__link">
+        Postal Code Conversion Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -281,7 +313,41 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Abacus administrators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Abacus administrators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Abacus administrators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
       
       
       
@@ -305,14 +371,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Dataverse utilities</a>
           
-            <label for="__nav_4_2">
+            <label for="__nav_5_1">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Dataverse utilities" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
+        <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
           Dataverse utilities
         </label>
@@ -479,22 +545,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../bc_assessment/bc_assessment/" class="md-nav__link">
-        BC Assessment data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../pccf/pccf/" class="md-nav__link">
-        Postal Code Conversion Files
+      <a href="../../../../adding_data/" class="md-nav__link">
+        Adding data
       </a>
     </li>
   
@@ -622,7 +674,7 @@ manipulation</p>
 <p>Raised on md5 mismatch</p>
 <p><a name="dataverse_utils.dataverse_utils.make_tsv"></a></p>
 <h5 id="make_tsv">make_tsv<a class="headerlink" href="#make_tsv" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">make_tsv</span><span class="p">(</span><span class="n">start_dir</span><span class="p">,</span> <span class="n">in_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">def_tag</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="n">inc_header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">make_tsv</span><span class="p">(</span><span class="n">start_dir</span><span class="p">,</span> <span class="n">in_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">def_tag</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="n">inc_header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">quotype</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_MINIMAL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 <p>Recurses the tree for files and produces tsv output with
 with headers 'file', 'description', 'tags'.</p>
@@ -640,9 +692,19 @@ with headers 'file', 'description', 'tags'.</p>
   eg. ('Data, 2016')</p>
 <p>inc_header : bool
   Include header row</p>
+<ul>
+<li><code class="highlight">quotype</code> - int
+  integer value or csv quote type.
+  Default = csv.QUOTE_MINIMAL
+  Acceptable values:
+  csv.QUOTE_MINIMAL / 0
+  csv.QUOTE_ALL / 1
+  csv.QUOTE_NONNUMERIC / 2
+  csv.QUOTE_NONE / 3</li>
+</ul>
 <p><a name="dataverse_utils.dataverse_utils.dump_tsv"></a></p>
 <h5 id="dump_tsv">dump_tsv<a class="headerlink" href="#dump_tsv" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">dump_tsv</span><span class="p">(</span><span class="n">start_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">in_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">def_tag</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="n">inc_header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">dump_tsv</span><span class="p">(</span><span class="n">start_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">in_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div>
 <p>Dumps output of make_tsv manifest to a file.</p>
 <hr />
@@ -652,12 +714,25 @@ with headers 'file', 'description', 'tags'.</p>
 <p>in_list : list
   List of files for which to create manifest entries. Will
   default to recursive directory crawl</p>
+<p>OPTIONAL KEYWORD ARGUMENTS</p>
 <p>def_tag : str
   Default Dataverse tag (eg, Data, Documentation, etc)
   Separate tags with an easily splitable character:
-  eg. ('Data, 2016')</p>
+  eg. ('Data, 2016')
+- <code class="highlight">Default</code> - 'Data'</p>
 <p>inc_header : bool
-  Include header for tsv.</p>
+  Include header for tsv.
+  Default : True</p>
+<ul>
+<li><code class="highlight">quotype</code> - int
+  integer value or csv quote type.
+  Default : csv.QUOTE_MINIMAL
+  Acceptable values:
+  csv.QUOTE_MINIMAL / 0
+  csv.QUOTE_ALL / 1
+  csv.QUOTE_NONNUMERIC / 2
+  csv.QUOTE_NONE / 3</li>
+</ul>
 <p><a name="dataverse_utils.dataverse_utils.file_path"></a></p>
 <h5 id="file_path">file_path<a class="headerlink" href="#file_path" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">file_path</span><span class="p">(</span><span class="n">fpath</span><span class="p">,</span> <span class="n">trunc</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -1028,7 +1103,7 @@ page.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.top", "header.autohide", "content.code.annotate", "navigation.indexes", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.top", "header.autohide", "content.code.annotate", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.e1a181d9.min.js"></script>

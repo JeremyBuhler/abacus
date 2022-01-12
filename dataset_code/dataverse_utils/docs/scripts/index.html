@@ -226,22 +226,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
         
           
             
-          
-        
           
         
           
@@ -274,6 +270,42 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../../bc_assessment/bc_assessment/" class="md-nav__link">
+        BC Assessment data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pccf/pccf/" class="md-nav__link">
+        Postal Code Conversion Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -281,7 +313,41 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Abacus administrators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Abacus administrators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Abacus administrators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
       
       
       
@@ -305,14 +371,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Dataverse utilities</a>
           
-            <label for="__nav_4_2">
+            <label for="__nav_5_1">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Dataverse utilities" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
+        <label class="md-nav__title" for="__nav_5_1">
           <span class="md-nav__icon md-icon"></span>
           Dataverse utilities
         </label>
@@ -474,22 +540,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../bc_assessment/bc_assessment/" class="md-nav__link">
-        BC Assessment data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../pccf/pccf/" class="md-nav__link">
-        Postal Code Conversion Files
+      <a href="../../../../adding_data/" class="md-nav__link">
+        Adding data
       </a>
     </li>
   
@@ -632,7 +684,7 @@ code {
 <p>Tags may be separated by commas, eg: "Data, SAS, June 2021".</p>
 <p>Using stdout and a redirect will also save time. First dump a file as normal. Add other files to the end with different information using the exclude header switch <code class="highlight">-x</code> and different tags along with output redirection <code class="highlight">&gt;&gt;</code>.</p>
 <p><strong>Usage</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">usage</span><span class="p">:</span> <span class="n">dv_manifest_gen</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILENAME</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TAG</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="n">files</span> <span class="p">[</span><span class="n">files</span> <span class="o">...</span><span class="p">]]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">usage</span><span class="p">:</span> <span class="n">dv_manifest_gen</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILENAME</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TAG</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">q</span> <span class="n">QUOTE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">[</span><span class="n">files</span> <span class="p">[</span><span class="n">files</span> <span class="o">...</span><span class="p">]]</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Creates</span> <span class="n">a</span> <span class="n">file</span> <span class="n">manifest</span> <span class="ow">in</span> <span class="n">tab</span> <span class="n">separated</span> <span class="n">value</span> <span class="n">format</span> <span class="n">which</span> <span class="n">can</span> <span class="n">then</span> <span class="n">be</span> <span class="n">edited</span> <span class="ow">and</span> <span class="n">used</span> <span class="k">for</span> <span class="n">file</span> <span class="n">uploads</span> <span class="n">to</span> <span class="n">a</span> <span class="n">Dataverse</span> <span class="n">collection</span><span class="o">.</span> <span class="n">Files</span> <span class="n">can</span> <span class="n">be</span> <span class="n">edited</span> <span class="n">to</span> <span class="n">add</span> <span class="n">file</span> <span class="n">descriptions</span> <span class="ow">and</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">comma</span><span class="o">-</span><span class="n">separated</span> <span class="n">tags</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">automatically</span> <span class="n">attached</span> <span class="n">to</span> <span class="n">metadata</span> <span class="n">using</span> <span class="n">products</span> <span class="n">using</span> <span class="n">the</span> <span class="n">dataverse_utils</span> <span class="n">library</span><span class="o">.</span> <span class="n">Will</span> <span class="n">dump</span> <span class="n">to</span> <span class="n">stdout</span> <span class="n">unless</span> <span class="o">-</span><span class="n">f</span> <span class="ow">or</span> <span class="o">--</span><span class="n">filename</span> <span class="k">is</span> <span class="n">used</span><span class="o">.</span> <span class="n">Using</span> <span class="n">the</span>
@@ -648,8 +700,11 @@ code {
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>  <span class="o">-</span><span class="n">t</span> <span class="n">TAG</span><span class="p">,</span> <span class="o">--</span><span class="n">tag</span> <span class="n">TAG</span>     <span class="n">Default</span> <span class="n">tag</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span> <span class="n">Separate</span> <span class="n">with</span> <span class="n">comma</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">quotes</span> <span class="k">if</span> <span class="n">there</span> <span class="n">are</span> <span class="n">spaces</span><span class="o">.</span> <span class="n">eg</span><span class="o">.</span> <span class="s2">&quot;Data, June 2021&quot;</span><span class="o">.</span> <span class="n">Defaults</span> <span class="n">to</span> <span class="s2">&quot;Data&quot;</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a>  <span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">header</span>       <span class="n">Don</span><span class="s1">&#39;t include header in output. Useful if creating a complex tsv using redirects (ie, &quot;&gt;&gt;&quot;).</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a>  <span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="o">--</span><span class="n">recursive</span>       <span class="n">Recursive</span> <span class="n">listing</span><span class="o">.</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>  <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">show</span><span class="o">-</span><span class="n">hidden</span>     <span class="n">Include</span> <span class="n">hidden</span> <span class="n">files</span><span class="o">.</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="ow">and</span> <span class="n">exit</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>  <span class="o">-</span><span class="n">q</span> <span class="n">QUOTE</span><span class="p">,</span> <span class="o">--</span><span class="n">quote</span> <span class="n">QUOTE</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>                        <span class="n">Quote</span> <span class="n">type</span><span class="o">.</span> <span class="n">Cell</span> <span class="n">value</span> <span class="n">quoting</span> <span class="n">parameters</span><span class="o">.</span> <span class="n">Options</span><span class="p">:</span> <span class="n">none</span> <span class="p">(</span><span class="n">no</span> <span class="n">quotes</span><span class="p">),</span> <span class="nb">min</span> <span class="p">(</span><span class="n">minimal</span><span class="p">,</span> <span class="n">ie</span><span class="o">.</span> <span class="n">special</span> <span class="n">characters</span> <span class="n">only</span> <span class="p">)</span><span class="n">nonum</span> <span class="p">(</span><span class="n">non</span><span class="o">-</span><span class="n">numeric</span><span class="p">),</span> <span class="n">all</span> <span class="p">(</span><span class="n">all</span> <span class="n">cells</span><span class="p">)</span><span class="o">.</span> <span class="n">Default</span><span class="p">:</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>                        <span class="nb">min</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>  <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">show</span><span class="o">-</span><span class="n">hidden</span>     <span class="n">Include</span> <span class="n">hidden</span> <span class="n">files</span><span class="o">.</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>  <span class="o">--</span><span class="n">version</span>             <span class="n">Show</span> <span class="n">version</span> <span class="n">number</span> <span class="ow">and</span> <span class="n">exit</span>
 </code></pre></div>
 <h2 id="dv_upload_tsvpy">dv_upload_tsv.py<a class="headerlink" href="#dv_upload_tsvpy" title="Permanent link">&para;</a></h2>
 <p>Now that you have a tsv full of nicely described data, you can easily upload it to an existing study if you know the persistent ID and have an API key.</p>
@@ -861,7 +916,7 @@ code {
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.top", "header.autohide", "content.code.annotate", "navigation.indexes", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.top", "header.autohide", "content.code.annotate", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
