@@ -2,7 +2,10 @@
 
 While Abacus contains the licensed data sets for you to work with, that is, the material provided by the publisher, what it *doesn't* contain is code written by the library and other researchers to work with this data.
 
-The _Dataset code_ section provides scripts, tools, and guidance for working with some datasets in Abacus.
+The _Dataset code_ section provides scripts, tools, and guidance for working with some datasets in Abacus:
+
+- [BC Assessment data](bc_assessment/bc_assessment.md)
+- [Postal Code Conversion Files (PCCF)](pccf/pccf.md)
 
 Material in this section was created by UBC Library or contributed by the research community. If you've written code, queries, or other material that may help other researchers use an Abacus dataset please consider sharing it (contact Jeremy Buhler, Data Librarian, UBC Library at [jeremy.buhler@ubc.ca](mailto:jeremy.buhler@ubc.ca)).
 
