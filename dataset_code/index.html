@@ -322,6 +322,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5">
@@ -341,57 +343,9 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="dataverse_utils/docs/">Dataverse utilities</a>
-          
-            <label for="__nav_5_1">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Dataverse utilities" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Dataverse utilities
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="dataverse_utils/docs/api_ref/" class="md-nav__link">
-        API reference
+      <a href="../admin/dataverse_utils/" class="md-nav__link">
+        dataverse_utils
       </a>
     </li>
   
@@ -404,8 +358,8 @@
   
   
     <li class="md-nav__item">
-      <a href="dataverse_utils/docs/scripts/" class="md-nav__link">
-        Scripts
+      <a href="../admin/fcheck/" class="md-nav__link">
+        fcheck/damage
       </a>
     </li>
   
@@ -418,42 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dataverse_utils/docs/faq/" class="md-nav__link">
-        FAQ
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="dataverse_utils/docs/credits/" class="md-nav__link">
-        Credits
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adding_data/" class="md-nav__link">
+      <a href="../admin/adding_data/" class="md-nav__link">
         Adding data
       </a>
     </li>
@@ -515,40 +434,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#general-purpose-utilities" class="md-nav__link">
-    General purpose utilities
-  </a>
-  
-    <nav class="md-nav" aria-label="General purpose utilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fcheckdamage" class="md-nav__link">
-    fcheck/damage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dataverse_utils" class="md-nav__link">
-    dataverse_utils
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dataset-specific-resources" class="md-nav__link">
-    Dataset-specific resources
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -564,12 +449,13 @@
 
 <h1 id="dataset-code">Dataset code<a class="headerlink" href="#dataset-code" title="Permanent link">&para;</a></h1>
 <p>While Abacus contains the licensed data sets for you to work with, that is, the material provided by the publisher, what it <em>doesn't</em> contain is code written by the library and other researchers to work with this data.</p>
-<p>The <em>Dataset code</em> section provides scripts, tools, and guidance for working with specific datasets in Abacus. You'll also find software tools designed to work with the Abacus platform itself, and generalized data tools not specific to one particular data set.</p>
+<p>The <em>Dataset code</em> section provides scripts, tools, and guidance for working with some datasets in Abacus.</p>
 <p>Material in this section was created by UBC Library or contributed by the research community. If you've written code, queries, or other material that may help other researchers use an Abacus dataset please consider sharing it (contact Jeremy Buhler, Data Librarian, UBC Library at <a href="mailto:jeremy.buhler@ubc.ca">jeremy.buhler@ubc.ca</a>).</p>
 <h2 id="abacus-git-repository">Abacus Git repository<a class="headerlink" href="#abacus-git-repository" title="Permanent link">&para;</a></h2>
 <p>Computer code, unlike books or even licensed data sets, is notoriously changeable. Browser versions can change frequently; the same can be said for utilities used to analyse data. Because of this, software is often stored on systems which allow <em>version control</em>. More than just indicating the most current version of a piece of software, version control systems allow users to track changes in the software, allowing you to move not only forward and back over versions, but laterally over branched changes.</p>
-<p>Utilities and code snippets for material in Abacus are stored in such a system, specfically using a version control system called <a href="https://en.wikipedia.org/wiki/Git">Git</a>. This is more suitable than storing them within Abacus itself, as the Git system is much more user-friendly for copying, modifying and reusing software than the built-in version control system in Abacus.</p>
-<p><a href="https://github.com/abacus-code">Take me to the Abacus git utility repository</a></p>
+<p>Utilities and code snippets for material in Abacus are stored in such a system, specifically using a version control system called <a href="https://en.wikipedia.org/wiki/Git">Git</a>. This is more suitable than storing them within Abacus itself, as the Git system is much more user-friendly for copying, modifying and reusing software than the built-in version control system in Abacus.</p>
+<p>This website and the dataset code is based on files stored in a Git "repository." You don't need to understand Git to use this site, but users familiar with Git and GitHub may prefer to use that interface.</p>
+<p><a href="https://github.com/abacus-code/abacus_resources">Take me to the abacus_resources repository</a></p>
 <h3 id="how-to-use-git">How to use Git<a class="headerlink" href="#how-to-use-git" title="Permanent link">&para;</a></h3>
 <p>There are two possible ways to use Git: from the command line, or using a graphical user interface.</p>
 <ul>
@@ -581,24 +467,6 @@
 </li>
 </ul>
 <p>If you are completely new to the concept and prefer something hands on and less technically dry, there is a free game which teaches the basics of Git: <a href="https://ohmygit.org/">Oh My Git</a>.</p>
-<h2 id="general-purpose-utilities">General purpose utilities<a class="headerlink" href="#general-purpose-utilities" title="Permanent link">&para;</a></h2>
-<p>These tools or utilities are not specific to a single dataset &#8212; or even to the Abacus platform &#8212; but they may be useful when working with datasets from Abacus. </p>
-<h3 id="fcheckdamage">fcheck/damage<a class="headerlink" href="#fcheckdamage" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/ubc-library-rc/fcheck">https://github.com/ubc-library-rc/fcheck</a></li>
-</ul>
-<p>Damage is a simple command-line utility which outputs a file manifest in a variety of formats, with a special focus on statistical package files from SPSS, SAS and Stata. FCheck is the Python 3 module which powers the damage utility, which you can use in your own python code.</p>
-<h3 id="dataverse_utils">dataverse_utils<a class="headerlink" href="#dataverse_utils" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/ubc-library-rc/dataverse_utils">https://github.com/ubc-library-rc/dataverse_utils</a></li>
-</ul>
-<p>Abacus runs on the open source <a href="https://dataverse.harvard.edu">Dataverse</a> platform. This is a Python library and generalized set of utilities which help with managing Dataverse repositories.</p>
-<h2 id="dataset-specific-resources">Dataset-specific resources<a class="headerlink" href="#dataset-specific-resources" title="Permanent link">&para;</a></h2>
-<p>Use the menu or the links below to access resources and code related to specific datasets or types of data in Abacus</p>
-<ul>
-<li><a href="bc_assessment/bc_assessment/">BC Assessment data</a></li>
-<li><a href="pccf/pccf/">Postal Code Conversion Files (PCCF)</a></li>
-</ul>
 
               
             </article>
