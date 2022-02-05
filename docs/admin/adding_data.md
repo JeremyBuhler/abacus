@@ -22,7 +22,7 @@ This section describes how to create a dataset using the Abacus user interface, 
 2. Click the _Log In_ link in the top right, select your instution from the drop-down menu, and login with your institutional credentials.
 
 3. Click the _Add Data_ button on the right and select _New Dataset_ from the drop-down menu.
-    ![add new dataset](media/adding_data-new_dataset.png)
+    ![add new dataset](../media/adding_data-new_dataset.png)
 
 4. Complete the _Citation Metadata_ portion of the form, ensuring all mandatory fields are filled.
 
@@ -34,7 +34,7 @@ This section describes how to create a dataset using the Abacus user interface, 
 6. Click _Save Dataset_. 
 
 7. **Optional:** after saving, click _Edit dataset_ and select _Metadata_ from the dropdown. This will open an expanded form with additional metadata fields not shown on the first page. Fill additional metadata fields as desired, then save again.
-    ![add new dataset](media/adding_data-edit_metadata.png)
+    ![add new dataset](../media/adding_data-edit_metadata.png)
 
 8. Use the _Edit dataset_ drop-down options to update files and metadata as desired. The data will not be visible to end users until the dataset is published, so you can experiment without affecting anyone. 
 

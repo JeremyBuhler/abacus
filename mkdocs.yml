@@ -10,15 +10,11 @@ nav:
     - 'BC Assessment data': dataset_code/bc_assessment/bc_assessment.md
     - 'Postal Code Conversion Files': dataset_code/pccf/pccf.md
   - 'Abacus administrators':
-    - 'Dataverse utilities': 
-        - dataset_code/dataverse_utils/docs/index.md
-        - 'API reference': dataset_code/dataverse_utils/docs/api_ref.md
-        - 'Scripts': dataset_code/dataverse_utils/docs/scripts.md
-        - 'FAQ': dataset_code/dataverse_utils/docs/faq.md
-        - 'Credits': dataset_code/dataverse_utils/docs/credits.md
-    - 'Adding data': adding_data.md
-#   - 'Collection policy': collection_policy.md
-#   - 'Metadata guide': metadata_guide.md
+    - 'dataverse_utils': admin/dataverse_utils.md 
+    - 'fcheck/damage': admin/fcheck.md 
+    - 'Adding data': admin/adding_data.md
+#   - 'Collection policy': admin/collection_policy.md
+#   - 'Metadata guide': admin/metadata_guide.md
 
 theme: 
   name: material 
