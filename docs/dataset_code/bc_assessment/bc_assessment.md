@@ -18,7 +18,7 @@ The SQLite version is recommended for most users. For those interested in the fi
 ## Using the sqlite database
 The open source _DB Browser for SQLite_ is a good cross-platform tool for exploring and querying the SQLite version of the BC Assessment data: <https://sqlitebrowser.org>
 
-The database consists of 13 tables. Table and field names correspond to the XML elements and CSV fields described in the BC Assessment user guides available from <https://www1.bcassessment.ca/Support/Guide>.
+The database consists of 12 tables. Table and field names correspond to the XML elements and CSV fields described in the BC Assessment user guides available from <https://www1.bcassessment.ca/Support/Guide>.
 
 | Table name | Documentation
 | --- | ---
