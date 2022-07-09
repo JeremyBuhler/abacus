@@ -604,7 +604,7 @@
 </ul>
 <h2 id="using-the-sqlite-database">Using the sqlite database<a class="headerlink" href="#using-the-sqlite-database" title="Permanent link">&para;</a></h2>
 <p>The open source <em>DB Browser for SQLite</em> is a good cross-platform tool for exploring and querying the SQLite version of the BC Assessment data: <a href="https://sqlitebrowser.org">https://sqlitebrowser.org</a></p>
-<p>The database consists of 13 tables. Table and field names correspond to the XML elements and CSV fields described in the BC Assessment user guides available from <a href="https://www1.bcassessment.ca/Support/Guide">https://www1.bcassessment.ca/Support/Guide</a>.</p>
+<p>The database consists of 12 tables. Table and field names correspond to the XML elements and CSV fields described in the BC Assessment user guides available from <a href="https://www1.bcassessment.ca/Support/Guide">https://www1.bcassessment.ca/Support/Guide</a>.</p>
 <table>
 <thead>
 <tr>
@@ -674,7 +674,14 @@
 <p>Roll numbers are unique within a jurisdiction but may be repeated across jurisdictions. When joining on <code class="highlight">roll_number</code> also join on <code class="highlight">jurisdiction</code> to avoid unintended results.</p>
 </div>
 <h3 id="sales-data">Sales data<a class="headerlink" href="#sales-data" title="Permanent link">&para;</a></h3>
-<p>The <em>sales</em> table contains data about the three most recent sales for each property in the database, regardless of when they occurred. The SQLite database for a given year includes most sales for that year but it does not necessarily provide a complete picture for previous periods. </p>
+<p>The <em>sales</em> table contains data about the three most recent sales for each property in the database, regardless of when they occurred. The SQLite database for a given year includes most sales for that year but it does not necessarily provide a complete picture for previous periods. 
+Each sale in the database is assigned a <em>conveyanceType</em>, a two digit code identifying the type of sale. The Data Advice user guide does not include information about conveyance types but the list below was provided by a BC Assessment employee via email (June 2022).</p>
+<ul>
+<li><strong>Conveyance Type 4.</strong> Applied when more than one property is sold at the same time, multi properties together. </li>
+<li><strong>Conveyance Type 5.</strong> Applied when the sale transaction does not meet the analysis criteria. To ensure valid and comparable, only sales in a competitive market without undue influence are included. Reasons for a sale to be excluded include related parties, partial ownership, estate sales, or multiple properties sold together.</li>
+<li><strong>Conveyance Type 7.</strong> Applied when a property sold has an improvement (building) on it.</li>
+<li><strong>Conveyance Type 8.</strong> Applied when a property sold is vacant (no improvements).</li>
+</ul>
 <h3 id="assessed-property-values">Assessed property values<a class="headerlink" href="#assessed-property-values" title="Permanent link">&para;</a></h3>
 <p>The <em>valuation</em> table contains assessed values for each folio, reported as <code class="highlight">landValue</code> and <code class="highlight">improvementValue</code>. The <em>value</em> table contains similar information but with additional values for BC  Transit and School purposes (see the <code class="highlight">valueType</code> field). For most questions about assessed value use the <em>valuation</em> table.</p>
 <p>Some elements in the source XML are repeatable, including valuation. This means that one folio can have more than one entry in the <em>valuation</em> table (each with a different <code class="highlight">taxExemptCOde</code> or <code class="highlight">propertyClassCode</code>, for example). Consult the documentation and ensure your analysis accounts for multiple entries.</p>
