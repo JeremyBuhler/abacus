@@ -46,6 +46,12 @@ Most users will need to join tables to access the data that interests them. The 
 
 ### Sales data
 The _sales_ table contains data about the three most recent sales for each property in the database, regardless of when they occurred. The SQLite database for a given year includes most sales for that year but it does not necessarily provide a complete picture for previous periods. 
+Each sale in the database is assigned a _conveyanceType_, a two digit code identifying the type of sale. The Data Advice user guide does not include information about conveyance types but the list below was provided by a BC Assessment employee via email (June 2022).
+
+- **Conveyance Type 4.** Applied when more than one property is sold at the same time, multi properties together. 
+- **Conveyance Type 5.** Applied when the sale transaction does not meet the analysis criteria. To ensure valid and comparable, only sales in a competitive market without undue influence are included. Reasons for a sale to be excluded include related parties, partial ownership, estate sales, or multiple properties sold together.
+- **Conveyance Type 7.** Applied when a property sold has an improvement (building) on it.
+- **Conveyance Type 8.** Applied when a property sold is vacant (no improvements).
  
 ### Assessed property values
 The _valuation_ table contains assessed values for each folio, reported as `landValue` and `improvementValue`. The _value_ table contains similar information but with additional values for BC  Transit and School purposes (see the `valueType` field). For most questions about assessed value use the _valuation_ table.

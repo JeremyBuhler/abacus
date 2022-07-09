@@ -1,3 +1,6 @@
+# Site uses 'Material for MkDocs' <https://squidfunk.github.io/mkdocs-material/>
+# To build and push latest version to GitHub from command line: `mkdocs gh-deploy --force`
+
 site_name: 'Abacus resources'
 site_url: 'https://ubc-library-rc.github.io/abacus/'
 
