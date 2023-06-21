@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-format-and-conversion" class="md-skip">
+        <a href="#tips-for-working-with-bc-assessment-data" class="md-skip">
           Skip to content
         </a>
       
@@ -306,23 +306,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-format-and-conversion" class="md-nav__link">
-    Data format and conversion
+  <a href="#tips-for-working-with-bc-assessment-data" class="md-nav__link">
+    Tips for working with BC Assessment data
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-sqlite-database" class="md-nav__link">
-    Using the sqlite database
-  </a>
-  
-    <nav class="md-nav" aria-label="Using the sqlite database">
+    <nav class="md-nav" aria-label="Tips for working with BC Assessment data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#joining-tables" class="md-nav__link">
     Joining tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addresses" class="md-nav__link">
+    Addresses
   </a>
   
 </li>
@@ -341,22 +341,35 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sql-queries" class="md-nav__link">
-    SQL queries
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#historical-bc-assessment-data-2016-2022" class="md-nav__link">
+    Historical BC Assessment data, 2016-2022
+  </a>
+  
+    <nav class="md-nav" aria-label="Historical BC Assessment data, 2016-2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-sqlite-databases" class="md-nav__link">
+    Using the SQLite databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#abacusbca-package" class="md-nav__link">
     abacusBCA package
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -500,23 +513,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-format-and-conversion" class="md-nav__link">
-    Data format and conversion
+  <a href="#tips-for-working-with-bc-assessment-data" class="md-nav__link">
+    Tips for working with BC Assessment data
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-sqlite-database" class="md-nav__link">
-    Using the sqlite database
-  </a>
-  
-    <nav class="md-nav" aria-label="Using the sqlite database">
+    <nav class="md-nav" aria-label="Tips for working with BC Assessment data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#joining-tables" class="md-nav__link">
     Joining tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addresses" class="md-nav__link">
+    Addresses
   </a>
   
 </li>
@@ -535,22 +548,35 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sql-queries" class="md-nav__link">
-    SQL queries
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#historical-bc-assessment-data-2016-2022" class="md-nav__link">
+    Historical BC Assessment data, 2016-2022
+  </a>
+  
+    <nav class="md-nav" aria-label="Historical BC Assessment data, 2016-2022">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-sqlite-databases" class="md-nav__link">
+    Using the SQLite databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#abacusbca-package" class="md-nav__link">
     abacusBCA package
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -587,111 +613,59 @@
 </tr>
 <tr>
 <td><strong>Data access rules</strong></td>
-<td>Restricted to researchers currently affiliated with UBC</td>
+<td>Restricted to researchers currently affiliated with SFU, UBC, UNBC, and UVic</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The BC Assessment data in Abacus is currently restricted to UBC users, but other institutions may have access to the data in other forms. Contact your university library for more information. </p>
+<p>BC Assessment data in Abacus is currently restricted to SFU, UBC, UNBC, and UVic users, but other institutions may have access to the data in other forms. Contact your university library for more information. </p>
 </div>
-<h2 id="data-format-and-conversion">Data format and conversion<a class="headerlink" href="#data-format-and-conversion" title="Permanent link">&para;</a></h2>
-<p>BC Assessment provides data in XML and TXT format. To make the large XML files more accessible to researchers, UBC Library converts each to a series of CSV files and a SQLite database. Both the original files and the transformed versions are available in Abacus. </p>
-<p>The SQLite version is recommended for most users. For those interested in the file conversion, the process to create the SQLite database from the original XML and TXT files is outlined in these files: </p>
-<ul>
-<li><a href="../BCA_data_transformation_notes.txt" download>BCA_data_transformation_notes.txt</a> describes the steps involved </li>
-<li><a href="../BCA_REVD_stylesheet.xsl" download>BCA_REVD_stylesheet.xsl</a> is the XSLT stylesheet used in the transformation </li>
-</ul>
-<h2 id="using-the-sqlite-database">Using the sqlite database<a class="headerlink" href="#using-the-sqlite-database" title="Permanent link">&para;</a></h2>
-<p>The open source <em>DB Browser for SQLite</em> is a good cross-platform tool for exploring and querying the SQLite version of the BC Assessment data: <a href="https://sqlitebrowser.org">https://sqlitebrowser.org</a></p>
-<p>The database consists of 12 tables. Table and field names correspond to the XML elements and CSV fields described in the BC Assessment user guides available from <a href="https://www1.bcassessment.ca/Support/Guide">https://www1.bcassessment.ca/Support/Guide</a>.</p>
-<table>
-<thead>
-<tr>
-<th>Table name</th>
-<th>Documentation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>address</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>assessmentAreaKey</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>commercialInventory</td>
-<td>Commercial Inventory Extract user guide</td>
-</tr>
-<tr>
-<td>folio</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>folioDescription</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>jurisdictionKey</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>legalDescription</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>metadata</td>
-<td><em>not a data table; info about the database</em></td>
-</tr>
-<tr>
-<td>residentialInventory</td>
-<td>Residential Inventory Extract user guide</td>
-</tr>
-<tr>
-<td>sales</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>valuation</td>
-<td>Data Advice user guide</td>
-</tr>
-<tr>
-<td>value</td>
-<td>Data Advice user guide</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>All fields in the BC Assessment SQLite database are in the "text" data type by default. </p>
-</div>
+<h2 id="tips-for-working-with-bc-assessment-data">Tips for working with BC Assessment data<a class="headerlink" href="#tips-for-working-with-bc-assessment-data" title="Permanent link">&para;</a></h2>
 <h3 id="joining-tables">Joining tables<a class="headerlink" href="#joining-tables" title="Permanent link">&para;</a></h3>
-<p>Most users will need to join tables to access the data that interests them. The 10 tables derived from the <em>Data Advice</em> product can be joined on the <code class="highlight">folio_id</code> field. The two tables derived from <em>Inventory Extract</em> products (<em>residentialInventory</em> and <em>commercialInventory</em>) do not have folio IDs but can be joined to the <em>folio</em> table using <code class="highlight">roll_number</code> and <code class="highlight">jurisdiction</code>.</p>
+<p>Most users will need to join tables to access the data that interests them. Beginning in 2022 the <em>Data Advice</em> product comes as six CSV tables which can be joined to each other on the <code class="highlight">FOLIO_ID</code> field. Data from the <em>Residential Inventory Extract</em> and <em>Non-residential Inventory Extract</em> (formerly <em>Commercial Inventory</em>) do not have folio IDs but can be joined to <em>Data Advice</em> tables using <code class="highlight">ROLL_NUMBER</code> and <code class="highlight">JURISDICTION</code> fields.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Roll numbers are unique within a jurisdiction but may be repeated across jurisdictions. When joining on <code class="highlight">roll_number</code> also join on <code class="highlight">jurisdiction</code> to avoid unintended results.</p>
+<p>Roll numbers are unique within a jurisdiction but may be repeated across jurisdictions. When joining on roll number also join on jurisdiction to avoid unintended results.</p>
 </div>
+<h3 id="addresses">Addresses<a class="headerlink" href="#addresses" title="Permanent link">&para;</a></h3>
+<p>Some folios have more than one address, which can result in unexpected duplication when joining tables. Use the true/false <code class="highlight">PRIMARY_FLAG</code> field in the address table if you need only one address: for any folio there will be only one address where <code class="highlight">PRIMARY_FLAG</code> = <code class="highlight">T</code>. </p>
 <h3 id="sales-data">Sales data<a class="headerlink" href="#sales-data" title="Permanent link">&para;</a></h3>
-<p>The <em>sales</em> table contains data about the three most recent sales for each property in the database, regardless of when they occurred. The SQLite database for a given year includes most sales for that year but it does not necessarily provide a complete picture for previous periods. 
-Each sale in the database is assigned a <em>conveyanceType</em>, a two digit code identifying the type of sale. The Data Advice user guide does not include information about conveyance types but the list below was provided by a BC Assessment employee via email (June 2022).</p>
+<p>The <em>bca_folio_sales</em> table contains data about the three most recent sales for each property, regardless of when they occurred. The CSV file for a given year includes most sales for that year but it does not necessarily provide a complete picture for previous periods. 
+Each sale is assigned a <code class="highlight">CONVEYANCE_TYPE</code>, a code that identifies the type of sale. The <em>Data Advice</em> user guide does not include information about conveyance types but the list below was provided by a BC Assessment employee via email (June 2022).</p>
 <ul>
-<li><strong>Conveyance Type 4.</strong> Applied when more than one property is sold at the same time, multi properties together. </li>
+<li><strong>Conveyance Type 4.</strong> Applied when more than one property is sold at the same time, multiple properties together. </li>
 <li><strong>Conveyance Type 5.</strong> Applied when the sale transaction does not meet the analysis criteria. To ensure valid and comparable, only sales in a competitive market without undue influence are included. Reasons for a sale to be excluded include related parties, partial ownership, estate sales, or multiple properties sold together.</li>
 <li><strong>Conveyance Type 7.</strong> Applied when a property sold has an improvement (building) on it.</li>
 <li><strong>Conveyance Type 8.</strong> Applied when a property sold is vacant (no improvements).</li>
 </ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When analyzing sales data exclude transactions where <code class="highlight">CONVEYANCE_TYPE</code> is 5</p>
+</div>
 <h3 id="assessed-property-values">Assessed property values<a class="headerlink" href="#assessed-property-values" title="Permanent link">&para;</a></h3>
-<p>The <em>valuation</em> table contains assessed values for each folio, reported as <code class="highlight">landValue</code> and <code class="highlight">improvementValue</code>. The <em>value</em> table contains similar information but with additional values for BC  Transit and School purposes (see the <code class="highlight">valueType</code> field). For most questions about assessed value use the <em>valuation</em> table.</p>
-<p>Some elements in the source XML are repeatable, including valuation. This means that one folio can have more than one entry in the <em>valuation</em> table (each with a different <code class="highlight">taxExemptCOde</code> or <code class="highlight">propertyClassCode</code>, for example). Consult the documentation and ensure your analysis accounts for multiple entries.</p>
-<h3 id="sql-queries">SQL queries<a class="headerlink" href="#sql-queries" title="Permanent link">&para;</a></h3>
+<p>The <em>bca_folio_gnrl_prop_values</em> table contains assessed values for each folio, split into land value and improvement value. In the <em>COMP</em> and <em>REVD</em> files released in a given year, these represent the assessed value of the property and improvements on July 1 of the previous year.</p>
+<p>Some folios have more than one entry in the values table (each with a different <code class="highlight">GEN_PROPERTY_CLASS_CODE</code>, for example). Consult the documentation and ensure your analysis accounts for multiple entries.</p>
+<h2 id="historical-bc-assessment-data-2016-2022">Historical BC Assessment data, 2016-2022<a class="headerlink" href="#historical-bc-assessment-data-2016-2022" title="Permanent link">&para;</a></h2>
+<p>Data Advice files from 2016 to 2022 were distributed by BC Assessment in XML format only. To make the large XML files more accessible to researchers, UBC Library converted each to a series of CSV files and a SQLite database that includes the corresponding inventory extracts. Both the original files and the transformed versions are available in Abacus at <a href="https://hdl.handle.net/11272.1/AB2/LAPUAB">https://hdl.handle.net/11272.1/AB2/LAPUAB</a>. </p>
+<p>The SQLite database is recommended for most users. For those interested in the file conversion, the process to create the SQLite database from the original XML and TXT files is outlined in these files: </p>
+<ul>
+<li><a href="../BCA_data_transformation_notes.txt" download>BCA_data_transformation_notes.txt</a> describes the steps involved </li>
+<li><a href="../BCA_REVD_stylesheet.xsl" download>BCA_REVD_stylesheet.xsl</a> is the XSLT stylesheet used in the transformation </li>
+</ul>
+<h3 id="using-the-sqlite-databases">Using the SQLite databases<a class="headerlink" href="#using-the-sqlite-databases" title="Permanent link">&para;</a></h3>
+<p>The open source <em>DB Browser for SQLite</em> is a good cross-platform tool for exploring and querying the SQLite version of the BC Assessment data: <a href="https://sqlitebrowser.org">https://sqlitebrowser.org</a></p>
+<p>The database consists of 12 tables. Table and field names correspond to the XML elements and CSV fields described in the BC Assessment user guides available from <a href="https://www1.bcassessment.ca/Support/Guide">https://www1.bcassessment.ca/Support/Guide</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All fields in the BC Assessment SQLite databases use the "text" data type by default. </p>
+</div>
 <p>With the SQLite browser it's easy to filter tables and export to CSV, but SQL queries are the most efficient way to extract a subset of the data that fits your parameters. If you are new to SQL the <a href="https://www.w3schools.com/sql/">W3Schools SQL Tutorial</a> is a good place to learn the basics. </p>
-<h2 id="abacusbca-package">abacusBCA package<a class="headerlink" href="#abacusbca-package" title="Permanent link">&para;</a></h2>
+<h3 id="abacusbca-package">abacusBCA package<a class="headerlink" href="#abacusbca-package" title="Permanent link">&para;</a></h3>
 <p>The abacusBCA R package created by Jens von Bergmann facilitates data access and basic processing of <a href="https://hdl.handle.net/11272.1/AB2/LAPUAB">BC Assessment data hosted on Abacus</a> for research purposes. It has the ability to conveniently download the data and open a local sqlite connection. Users will have to specify their own abacus API token as environment variable to use this. </p>
 <ul>
 <li>Link to github repository: <a href="https://github.com/mountainMath/abacusBCA">https://github.com/mountainMath/abacusBCA</a></li>
-<li>Link to documentation: <a href="https://mountainmath.github.io/abacusbca/">https://mountainmath.github.io/abacusbca/</a></li>
+<li>Link to documentation: <a href="https://mountainmath.github.io/abacusBCA/">https://mountainmath.github.io/abacusBCA/</a></li>
 </ul>
 
               
