@@ -32,3 +32,11 @@ When no syntax file is available researchers can use other tools to parse the da
 ``` title="pccf_prep_script.R"
 --8<-- "dataset_code/pccf/pccf_prep_script.R"
 ```
+
+
+The Python script below works with the PCCF (not the PCCF+) to extract a variety of variables of your choice and save them as a tab-separated value (TSV) files
+
+``` title="pccf_data_extractor.py"
+--8<-- "dataset_code/pccf/pccf_data_extractor.py"
+```
+
