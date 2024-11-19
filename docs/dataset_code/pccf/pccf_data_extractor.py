@@ -10,7 +10,7 @@ import csv
 # the next variable. Use them as shown in the codebook because math is done later.
 # If you want more (or fewer variables), just edit this dictionary.
 
-what_i_want = {'PC': (1,6), #ie, positions
+what_i_want = {'PC': (1,7), #ie, positions
                'CDUID': (12,16), #The keys can be called whatever you want;
                'DGUID': (126,134),#The names are arbitrary
                'LAT': (138,148),
